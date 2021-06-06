@@ -124,7 +124,7 @@
         "ngx-router": {
             "projectType": "library",
             "root": "projects/ngx-router",
-            "sourceRoot": "projects/ngx-router/src",
+            "sourceRoot": "projects/ngx-router",
             "architect": {
                 "build": {
                     "builder": "@angular-devkit/build-ng-packagr:build",
@@ -136,7 +136,7 @@
                 "test": {
                     "builder": "@angular-devkit/build-angular:karma",
                     "options": {
-                        "main": "projects/ngx-router/src/test.ts",
+                        "main": "projects/ngx-router/test.ts",
                         "tsConfig": "projects/ngx-router/tsconfig.spec.json",
                         "karmaConfig": "projects/ngx-router/karma.conf.js",
                         "codeCoverage": true,
