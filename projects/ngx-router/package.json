@@ -1,0 +1,18 @@
+{
+    "name": "ngx-router",
+    "version": "1.0.0",
+    "peerDependencies": {
+        "@angular/core": ">=9.0.0"
+    },
+    "description": "A utility to get route params, query params from Activated Route by using dependency injection",
+    "keywords": ["angular", "ngx-router", "dependency injection", "angular DI"],
+    "license": "Apache-2.0",
+    "authors": {
+        "name": "Pham Huu Hien",
+        "email": "phhien203@gmail.com",
+        "url": "https://phamhuuhien.medium.com"
+    },
+    "repository": "",
+    "bugs": "",
+    "homepage": ""
+}

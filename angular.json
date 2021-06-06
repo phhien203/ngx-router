@@ -120,6 +120,40 @@
                     }
                 }
             }
+        },
+        "ngx-router": {
+            "projectType": "library",
+            "root": "projects/ngx-router",
+            "sourceRoot": "projects/ngx-router/src",
+            "architect": {
+                "build": {
+                    "builder": "@angular-devkit/build-ng-packagr:build",
+                    "options": {
+                        "tsConfig": "projects/ngx-router/tsconfig.lib.json",
+                        "project": "projects/ngx-router/ng-package.json"
+                    }
+                },
+                "test": {
+                    "builder": "@angular-devkit/build-angular:karma",
+                    "options": {
+                        "main": "projects/ngx-router/src/test.ts",
+                        "tsConfig": "projects/ngx-router/tsconfig.spec.json",
+                        "karmaConfig": "projects/ngx-router/karma.conf.js",
+                        "codeCoverage": true,
+                        "browsers": "ChromeHeadless"
+                    }
+                },
+                "lint": {
+                    "builder": "@angular-devkit/build-angular:tslint",
+                    "options": {
+                        "tsConfig": [
+                            "projects/ngx-router/tsconfig.lib.json",
+                            "projects/ngx-router/tsconfig.spec.json"
+                        ],
+                        "exclude": ["**/node_modules/**"]
+                    }
+                }
+            }
         }
     },
     "defaultProject": "demo"

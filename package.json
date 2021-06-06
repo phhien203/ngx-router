@@ -1,5 +1,5 @@
 {
-    "name": "@tinkoff/angular-open-source-starter",
+    "name": "ngx-router",
     "version": "1.0.0",
     "scripts": {
         "ng": "ng",
@@ -23,20 +23,25 @@
         "release:patch": "npm run release -- --release-as patch",
         "release:minor": "npm run release -- --release-as minor",
         "release:major": "npm run release -- --release-as major",
-        "publish": "npm run build:all && npm run publish:all"
+        "publish": "npm run build:all && npm run publish:all",
+        "build:all": "npm run build:ngx-router",
+        "publish:all": "npm run publish:ngx-router",
+        "build:ngx-router": "ng run ngx-router:build",
+        "test:ngx-router": "ng run ngx-router:test",
+        "test:ngx-router:watch": "ng run ngx-router:test --watch=true",
+        "publish:ngx-router": "npm publish ./dist/ngx-router"
     },
-    "description": "This is a template project to develop, create and open-source Angular libraries with demos",
-    "keywords": ["angular", "ng", "workspace", "library", "starter", "tinkoff"],
+    "description": "A utility to get route params, query params from Activated Route by using dependency injection",
+    "keywords": ["angular", "ngx-router", "dependency injection", "angular DI"],
     "license": "Apache-2.0",
-    "author": {
-        "name": "Roman Sedov",
-        "email": "79601794011@ya.ru",
-        "url": "http://marsibarsi.me/"
+    "authors": {
+        "name": "Pham Huu Hien",
+        "email": "phhien203@gmail.com",
+        "url": "https://phamhuuhien.medium.com"
     },
-    "contributors": ["Alex Inkin <alexander@inkin.ru>"],
-    "repository": "https://github.com/TinkoffCreditSystems/angular-library-starter",
-    "bugs": "https://github.com/TinkoffCreditSystems/angular-library-starter/issues",
-    "homepage": "https://github.com/TinkoffCreditSystems/angular-library-starter#README",
+    "repository": "https://github.com/phhien203/ngx-router",
+    "bugs": "https://github.com/phhien203/ngx-router/issues",
+    "homepage": "https://github.com/phhien203/ngx-router#README",
     "schematics": "./schematics/collection.json",
     "dependencies": {
         "@angular/animations": "^9.1.13",
