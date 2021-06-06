@@ -1,5 +1,5 @@
 import {ChangeDetectionStrategy, Component, Inject, InjectionToken} from '@angular/core';
-import {provideRouteParam} from '@ngx-router';
+import {provideRouteParam} from '@ngx-router/route-param';
 import {Observable} from 'rxjs';
 
 export const APP_SOME_ID = new InjectionToken<Observable<string>>(

@@ -12,7 +12,7 @@
         "email": "phhien203@gmail.com",
         "url": "https://phamhuuhien.medium.com"
     },
-    "repository": "",
-    "bugs": "",
-    "homepage": ""
+    "repository": "https://github.com/phhien203/ngx-router",
+    "bugs": "https://github.com/phhien203/ngx-router/issues",
+    "homepage": "https://github.com/phhien203/ngx-router#README"
 }

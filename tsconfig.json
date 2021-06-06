@@ -18,7 +18,8 @@
         "typeRoots": ["node_modules/@types"],
         "lib": ["es2018", "dom"],
         "paths": {
-            "@ngx-router": ["projects/ngx-router/src/public-api"]
+            "@ngx-router/route-param": ["projects/ngx-router/route-param/index"],
+            "@ngx-router/query-param": ["projects/ngx-router/query-param/index"]
         }
     }
 }
