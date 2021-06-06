@@ -4,7 +4,7 @@ import {StaticComponent} from './modules/static/static.component';
 
 export const appRoutes: Routes = [
     {
-        path: '',
+        path: ':someId',
         component: StaticComponent,
     },
     {
