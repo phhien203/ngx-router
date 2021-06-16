@@ -1,2 +1,1 @@
-export * from './provide-route-param';
-export * from './provide-route-param-snapshot';
+export * from './route-param.factory';

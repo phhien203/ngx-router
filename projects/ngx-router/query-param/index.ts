@@ -1,2 +1,1 @@
-export * from './provide-query-param';
-export * from './provide-query-param-snapshot';
+export * from './query-param.factory';
