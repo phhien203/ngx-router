@@ -18,14 +18,7 @@
         "typeRoots": ["node_modules/@types"],
         "lib": ["es2018", "dom"],
         "paths": {
-            "ngx-router/route-param": ["projects/ngx-router/route-param/index"],
-            "ngx-router/route-param-snapshot": [
-                "projects/ngx-router/route-param-snapshot/index"
-            ],
-            "ngx-router/query-param": ["projects/ngx-router/query-param/index"],
-            "ngx-router/query-param-snapshot": [
-                "projects/ngx-router/query-param-snapshot/index"
-            ]
+            "ngx-router/*": ["dist/ngx-router/*"]
         }
     }
 }
