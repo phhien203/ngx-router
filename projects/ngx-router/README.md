@@ -2,6 +2,7 @@
 
 [![angular-open-source-starter](https://img.shields.io/badge/made%20with-angular--open--source--starter-d81676?logo=angular)](https://github.com/TinkoffCreditSystems/angular-open-source-starter)
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/phhien203/ngx-router/CI%20of%20all%20packages)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/ngx-router)
 
 ## What's ngx-router
 
