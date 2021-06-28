@@ -6,6 +6,14 @@ export const appRoutes: Routes = [
     {
         path: ':someId',
         component: StaticComponent,
+        data: {
+            someData: {
+                foo: 'bar',
+            },
+            anotherData: {
+                bar: 'foo',
+            },
+        },
     },
     {
         path: 'lazy',

@@ -5,7 +5,9 @@
 
 ## What's ngx-router
 
-`ngx-router` is a utility that allows Angular users to get route param or query param from `ActivatedRoute` by using dependency injection.
+`ngx-router` is a utility that allows Angular users to get route param, query param, or route data from `ActivatedRoute` by using dependency injection.
+
+It's fully tree-shakable. Supported Angular version >= 9.
 
 ## Usage
 
@@ -16,13 +18,19 @@
 npm i ngx-router
 ```
 
-2. Declare Injection Token to hold route param or query param
+2. Declare Injection Token to hold route param, query param, or route data
 
-3. Use `provideRouteParam`, `provideRouteParamSnapshot`, `provideQueryParam`, or `provideQueryParamSanpshot` in component providers, then inject the token in step 2 and use it.
+3. Use
+
+    - `routeParamFactory`, `routeParamSnapshotFactory` to get value from route param as an Observable or as a snapshot
+    - `queryParamFactory`, `queryParamSanpshotFactory` to get value from query param as an Observable or as a snapshot
+    - `routeDataFactory`, `routeDataSnapshotFactory` to get value from route `data` as an Observable or as a snapshot
+
+4. Inject the token in step 2 and use it.
 
 ```javascript
-/*
-Suppose you have route config as following
+
+// Suppose you have route config as following
 
 export const appRoutes: Routes = [
     {
@@ -30,17 +38,25 @@ export const appRoutes: Routes = [
         component: SomeComponent,
     }
 ]
- */
 
-import { provideRouteParam } from 'ngx-router/route-param';
+
+import { routeParamFactory } from 'ngx-router/route-param';
 
 export const APP_SOME_ID = new InjectionToken<Observable<string>>('stream of :someId route param');
 
 @Component({
+    template: `<p>someId value: {{ someId$ | async }} </p>`,
     selecttor: 'app-some-component',
-    providers: [provideRouteParam(APP_SOME_ID, 'someId')]
+    providers: [
+        {
+            provide: APP_SOME_ID,
+            useFactory: routeParamFactory('someId'),
+            deps: [ActovatedRoute]
+        }
+    ]
 })
 export class SomeComponent {
     constructor(@Inject(APP_SOME_ID) public readonly someId$: Observable<string>) {}
 }
+
 ```
