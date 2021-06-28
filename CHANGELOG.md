@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/phhien203/ngx-router/compare/v1.1.1...v1.2.0) (2021-06-28)
+
+### Features
+
+-   **lib:** add api to get data as Observable and as snapshot ([7351988](https://github.com/phhien203/ngx-router/commit/73519889e5eacae0740454bba4bf103a1b79d77c))
+
 ### [1.1.1](https://github.com/phhien203/ngx-router/compare/v1.1.0...v1.1.1) (2021-06-16)
 
 ### Features
