@@ -6,9 +6,9 @@
 
 ## What's ngx-router
 
-`ngx-router` is a utility that allows Angular users to get route param, query param, or route data from `ActivatedRoute` by using dependency injection.
+`ngx-router` is a utility that allows Angular users to get route param, query param, or route data from `ActivatedRoute` by using dependency injection. It's fully tree-shakable. Supported Angular version >= 9.
 
-It's fully tree-shakable. Supported Angular version >= 9.
+More information in the [indepth article](https://indepth.dev/posts/1471/leveraging-dependency-injection-to-reduce-duplicated-code-in-angular)
 
 ## Usage
 
@@ -42,6 +42,7 @@ export const appRoutes: Routes = [
 
 
 import { routeParamFactory } from 'ngx-router/route-param';
+import { ActivatedRoute } from '@angular/router';
 
 export const APP_SOME_ID = new InjectionToken<Observable<string>>('stream of :someId route param');
 
@@ -52,7 +53,7 @@ export const APP_SOME_ID = new InjectionToken<Observable<string>>('stream of :so
         {
             provide: APP_SOME_ID,
             useFactory: routeParamFactory('someId'),
-            deps: [ActovatedRoute]
+            deps: [ActivatedRoute]
         }
     ]
 })
